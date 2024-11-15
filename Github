@@ -1,0 +1,141 @@
+- [ ] Learning Github
+-Create a Repository on GitHub
+    Now that you have made a GitHub account, sign in, and create a new Repo.
+    Then click "Create repository".
+-Push Local Repository to GitHub:
+    Since we have already set up a local Git repo, we are going to push that to GitHub:
+    a. Copy the URL, or click the clipboard marked in the image above.
+    b. Now paste it the following command:
+        git remote add origin https://github.com/w3schools-test/hello-world.git
+        NOTE - "git remote add origin URL" specifies that you are adding a remote repository, with the specified URL, as an origin to your local Git repo.
+    c. Now we are going to push our master branch to the origin url, and set it as the default remote branch:
+        git push --set-upstream origin master
+
+
+- [ ] Pull from Github
+-Pulling to Keep up-to-date with Changes:
+    When working as a team on a project, it is important that everyone stays up to date.
+    Any time you start working on a project, you should get the most recent changes to your local copy.
+    With Git, you can do that with " git pull" command.
+    The "pull" is a combination of 2 diff commands "fetch" and "merge". It is used to "pull" all changes from the github remote repository into the branch you are working on locally.
+    
+    #Let's take a closer look into how "fetch", "merge", and "pull" works.
+
+-How to keep your local Git up to date from a remote repository(Update Local Repo):
+    a. Make a change to the Readme.md file on GitHub and commit it on Github.
+    b.  Use pull to update our local Git:
+            git pull origin ...
+    c. check status
+            git status
+-Git Fetch
+    "fetch" gets all the change history of a tracked branch/repo.   So, on your local Git, "fetch" updates to see what has changed on GitHub:
+    a.  git fetch origin ...
+    b. git status
+        #It shows that "Your branch is behind the origin/master by 1 commit". 
+    c. but lets double check by viewing the log:
+            git log origin/master
+    d. View the differences  between our local master and origin/master:
+            git diff origin/master
+        Note - That looks precisely as expected! Now we can safely merge.
+
+-Git Merge:
+    "merge" combines the current branch, with a specified branch.
+    We have confirmed that the updates are as expected, and we can merge our local current branch (master) with origin/master :
+    a. git merge origin/master
+    b. git status
+    #There! Your local git is up to date!
+
+
+- [ ] Push to Github
+-Push Changes to GitHub
+    Let's try making some changes to our local git and pushing them to GitHub.
+    a. Edit using Code Editor
+    b. Commit the changes:
+        git commit -a -m "Updated index.html. Resized image"
+    c. git status
+    d. Now push our changes to our remote origin:
+        git push origin
+    e. Go to GitHub, and confirm that the repository has a new commit:
+    #Now, we have pushed the current branch to its default remote orig
+
+- [ ] Github Branch
+-Create a New Branch on GitHub:
+    On GitHub, access your repository and click the "master" branch button. There you can create a new Branch. Type in a descriptive name, and click Create branch:
+    The branch should now be created and active. You can confirm which branch you are working on by looking at the branch button. See that it now says "html-skeleton" instead of "main"?
+
+- [ ] Pull Branch from Github
+-Pulling a Branch from GitHub
+    Now continue working on our new branch in our local Git.
+    Lets pull from our GitHub repository again so that our code is up-to-date:
+        a. git pull
+            #Now our main branch is up to date. And we can see that there is a new branch available on GitHub.
+        b. git status
+        c. git branch
+            #So, we do not have the new branch on our local Git. But we know it is available on GitHub. So we can use the "-a" option to see all local and remote branches:
+         d. git branch -a
+         #We see that the branch html-skeleton is available remotely, but not on our local git. Lets check it out:
+         e. git checkout html-skeleton
+         f. git pull [to check if it is all up to date]
+         g. git branch
+        NOTE - To see remote branches alone, type "git branch -r" 
+
+- [ ] Push Branch to Github
+-Push a Branch to GitHub
+    Let's try to create a new local branch, and push that to GitHub.
+    a. Start by creating a branch, like we did earlier:
+        git checkout -b update-readme
+    b. Make some changes to the README.md file. Just add a new line.
+    c. git status
+    d. git add README.md
+    e. git commit -m "Updated readme for GitHub Branches"
+    f. Now push the branch from our local Git repository, to GitHub, where everyone can see the changes:
+            git push origin update-readme
+    g. Go to GitHub, and confirm that the repository has a new branch:
+    i. In GitHub, we can now see the changes and merge them into the master branch if we approve it.
+        If you click the "Compare & pull request", you can go through the changes made and new files added:
+    j. Create a pull request on Github
+    k. A pull request is how you propose changes. You can ask some to review your changes or pull your contribution and merge it into their branch.
+    l. Since this is your own repository, you can "merge your pull request" yourself:
+        #The pull request will record the changes, which means you can go through them later to figure out the changes made.
+
+
+- [ ] Github Flow
+-Working using the GitHub Flow:
+    The GitHub flow is a workflow designed to work well with Git and GitHub. It focuses on branching and makes it possible for teams to experiment freely, and make deployments regularly.
+    #The GitHub flow works like this:
+A. Create a New Branch:
+    Branching is the key concept in Git. And it works around the rule that the master branch is ALWAYS deployable.
+    That means, if you want to try something new or experiment, you create a new branch! Branching gives you an environment where you can make changes without affecting the main branch.
+    When your new branch is ready, it can be reviewed, discussed, and merged with the main branch when ready. When you make a new branch, you will (almost always) want to make it from the master branch.
+B. Make Changes and Add Commits:
+    After the new branch is created, it is time to get to work. Make changes by adding, editing and deleting files. Whenever you reach a small milestone, add the changes to your branch by commit.
+    Adding commits keeps track of your work. Each commit should have a message explaining what has changed and why. Each commit becomes a part of the history of the branch, and a point you can revert back to if you need to.
+C. Open a Pull Request:
+    Pull requests are a key part of GitHub. A Pull Request notifies people you have changes ready for them to consider or review.
+    You can ask others to review your changes or pull your contribution and merge it into their branch.
+D. Review:
+    When a Pull Request is made, it can be reviewed by whoever has the proper access to the branch. This is where good discussions and review of the changes happen.
+    Pull Requests are designed to allow people to work together easily and produce better results together!
+    If you receive feedback and continue to improve your changes, you can push your changes with new commits, making further reviews possible.
+    Note- GitHub shows new commit and feedback in the "unified Pull Request view".
+E. Deploy:
+    When the pull request has been reviewed and everything looks good, it is time for the final testing. GitHub allows you to deploy from a branch for final testing in production before merging with the master branch.
+    If any issues arise, you can undo the changes by deploying the master branch into production again.
+    Note: Teams often have dedicated testing environments used for deploying branches.
+F. Merge:
+    After exhaustive testing, you can merge the code into the master branch!
+    Pull Requests keep records of changes to your code, and if you commented and named changes well, you can go back and understand why changes and decisions were made.
+    Note- You can add keywords to your pull request for easier searching!
+
+- [ ] Git GitHub Fork
+-Add to Someone Else's Repository:
+    At the heart of Git is collaboration. However, Git does not allow you to add code to someone else's repository without access rights.
+    In these next 3 chapters we will show you how to copy a repository, make changes to it, and suggest those changes be implemented to the original repository.
+-Fork a Repository
+    A fork is a copy of a repository. This is useful when you want to contribute to someone else's project or start your own project based on theirs.
+    Note - fork is not a command in Git, but something offered in GitHub and other repository hosts. Let's start by logging in to GitHub, and fork our repository:
+https://github.com/w3schools-test/w3schools-test.github.io
+    Note - Read more on w3schools.com
+    
+- [ ] 
+
