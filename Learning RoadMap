@@ -1,0 +1,149 @@
+- [ ] Learning Git and GitHub Roadmap:
+-Introduction to Git
+-. 
+-Getting started with Git
+Local Repository Vs Remote Repository
+Understanding Git Workflow
+04:24 
+8. Basic commands and Git Initialization
+07:31 
+9. Staging and Making a Commit
+04:55 
+10. The .git Directory
+05:07 
+11. Making Changes to Files
+04:02 
+12. Git Log and Show
+05:19 
+13. Git Express Commit
+07:19 
+14.Git Checkout
+07:56 
+15. More Git Log Commands 01
+07:33 
+16.More Git Log Commands 02
+02:42 
+17. Git Alias
+03:37 
+18. How to use the Git ignore
+ Git Branch and merge 01
+03:14 
+20. Git Branch and merge 02
+10:07 
+21. Git Merge Conflict and how to handle them
+07:02 
+22. Git Tags – How To Create different versions of a project
+-Undoing Git Commands:
+Git Stash and how to use it
+04:00 
+24. Git Revert
+05:50 
+25. Git Reset
+04:24 
+26. Git diff
+-Practicals:
+Git Practice: Part 01 – Working with the master branch
+07:58 
+28. Git Practice: Part 02 – Creating branches
+01:52 
+29. Git Practice: Part 03 – Working with the frontend branch
+03:09 
+30. Git Practice: Part 04 – Working with the Backend branch
+02:52 
+31. Git Practice: Part 05 – Merging all branches
+06:09 
+32. Git Practice: Part 06 – Creating Different Versions of a Project
+-Connect Loca Repo to Github
+33. Creating a GitHub Account
+01:54 
+34. UPDATE – Set default branch to master
+00:00 
+35. Creating a GitHub Repository
+02:21 
+36 Push Local repository to GitHub
+03:31 
+37. Git Push Simplified
+05:41 
+38.Git Push Error
+03:32 
+39. Git Fetch VS Pull
+06:21 
+40.Git Clone
+04:43 
+41. Git Clone and Rename
+02:40 
+42. GitHub Settings – Rename, transfer, archive and delete repository
+03:47 
+43. View Commit Details on GitHub
+03:00 
+44. The README.md File
+-GitHub More:
+5. Push Changes from another Branch
+06:06 
+46. Delete a Branch on GitHub
+02:16 
+47. Push Tags to GitHub
+08:51 
+48. Delete Tags on GitHub
+02:32 
+49. Create a Release on GitHub
+03:14 
+50. How to Fork a GitHub Project
+03:42 
+51. GitHub Pull Request
+11:59 
+52. GitHub Pull Request in Practice
+06:10 
+53. GitHub Collaborators
+04:12 
+54. GitHub Insight
+02:12 
+55. Creating an Issue on GitHub
+03:52 
+56. Closing an Issue on GitHub
+01:05 
+57. GitHub Labels
+05:38 
+58. GitHub Milestones
+03:54 
+59. GitHub Gist
+-Git in Visual Studio code:
+60. Introduction to the section
+01:22 
+61. Enable Git in Visual Studio Code
+01:35 
+62. Git Initialization in VS Code
+03:12 
+63. Staging and Making Commit in VS Code
+03:19 
+64. Creating Branches in VS Code
+01:55 
+65. Git Merge in VS Code
+03:12 
+66. Resolving Merge Conflicts in VS Code
+06:18 
+67. Comparing Changes
+02:01 
+68. Reverting Changes
+03:11 
+69. Push Local repository to GitHub from VS Code
+-Git Merge vs Rebase:
+70. Git Merge VS Rebase – Part 01
+03:34 
+71. Git Merge VS Rebase – Part 02
+11:51 
+72. Git Merge VS Rebase – Part 03
+-Debugging in Git:
+73. Debugging using git bisect
+-Setting up SSH on GitHub
+74. Setting up SSH on GitHub
+-
+-
+-
+-
+-
+-
+-
+-
+
+-
